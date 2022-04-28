@@ -23,11 +23,17 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
+    <h3>Under Title</h3>
+
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+    <h3>Under Page Description</h3>
+
     {% render 'meta-tags' %}
+
+    <h3>Under Rendering Meta Tags</h3>
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
